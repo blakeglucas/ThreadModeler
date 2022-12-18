@@ -121,7 +121,7 @@ namespace ThreadModeler
             }
             ThreadWorker.Initialize(app);
             Toolkit.Initialize(app);
-            string _ThreadTemplatePath = new FileInfo("./ISO Template.ipt").FullName;
+            string _ThreadTemplatePath = new FileInfo(options.TemplateFile).FullName;
             PartDocument template = app.Documents.Open(
                 _ThreadTemplatePath, false) as PartDocument;
             string TargetIPTPath = new FileInfo(options.TargetIPT).FullName;
